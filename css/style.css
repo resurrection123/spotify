@@ -1,0 +1,298 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box; 
+}
+:root{
+  --grey:rgb(184, 157, 157);
+  --greydarl:#7D7F84;
+}
+body{
+  font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.border-radius{
+  border-radius: 50%;
+}
+h4{
+  color: white;
+}
+.white{
+  color: white;
+}
+.bold{
+  font-weight: bold;
+}
+ul{
+  list-style: none;
+}
+.fz-30{
+  font-size: 22px;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+  color: var(--grey) ;
+  font-size: inherit;
+}
+.btn-custom{
+  border-radius: 40px;
+  padding: 12px 32px;
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s transform ;
+}
+.btn-custom:hover{
+  transform-origin: top right;
+  transform: scale(1.1);
+}
+main {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+main  .side-menu{
+  width: 250px;
+  background-color: black;
+}
+main .content-main{
+  width: calc(100% - 250px);
+  background-color: #141922;
+  color: white;
+  overflow: hidden;
+}
+footer{
+  min-height: 90px;
+  height: 90px;
+  background-color: #282828;
+  z-index: 100;
+  position: relative;
+}
+main .side-menu .header-side{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+main .side-menu .header-side img{
+  width: 160px;
+}
+main .side-menu .content-side{
+  margin:10px 0;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+}
+main .side-menu .content-side .box:not(:first-child){
+  padding: 0 22px;
+  margin-top: 25px;
+}
+main .side-menu .content-side .box.navigation {
+  padding: 0;
+}
+ main .side-menu .content-side .box ul li{
+  padding: 10px 0;
+}
+main .side-menu .content-side .box.navigation ul li{
+ font-size: 14px;
+ font-weight: bold;
+ transition: 0.3s all ;
+ padding: 5px 22px;
+}
+main .side-menu .content-side .box.navigation ul li img{
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+ }
+main .side-menu .content-side .box ul li:hover a,
+main .content-main .body-main .list ul li:hover a
+{
+  color: white;
+}
+main .side-menu .content-side .box.navigation ul li:hover{
+  border-left: 4px solid yellow;
+}
+main .side-menu .content-side .box.playlist{
+  overflow-y: auto;
+  flex-grow: 1;
+} 
+.plus-icon{
+  font-size: 35px;
+  color: var(--grey) ;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+main .side-menu .content-side .box.profile img{
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+main .side-menu .content-side .box.profile img.profile{
+  border-radius: 50%;
+  background-color:var(--grey);
+  padding: 3px;
+}
+main .side-menu .content-side .box.profile ul li:first-of-type{
+  border-bottom: 2px solid var(--grey);
+}
+
+main .content-main .header-main{
+  position: fixed;
+  width: calc(100% - 250px);
+  height: 90px;
+  background-color:rgba(0, 0, 0, 0.397);
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+main .content-main .body-main{
+  height: 100%;
+  padding: 25px;
+  font-size: 18px;
+  margin-top: 90px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+main .content-main .body-main .list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+main .content-main .body-main .list ul li{
+ display: inline-block;
+ margin: 0 8px;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 15px;
+}
+main .content-main .body-main .list ul li a::after{
+  content: "";
+  display: block;
+  visibility: hidden;
+  margin-top: 3px;
+  width: 10px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: yellow;
+  transition: 0.7s width ease-out ;
+ }
+ main .content-main .body-main .list ul li:hover a::after{
+  visibility: visible;
+  width: 100%;
+ }
+main .content-main .body-main .list ul li a{
+  color: var(--greydarl);
+ }
+ main .content-main .body-main section:not(:first-child){
+  margin: 40px 0;
+ }
+ main .content-main .body-main section h2{
+  font-size: 30px;
+ }
+ main .content-main .body-main section p{
+  color: var(--greydarl);
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+ }
+ main .content-main .body-main section .playlist{
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+ }
+ main .content-main .body-main section .playlist .item{
+  flex-basis: calc(100% /6 - 20px) ;
+  min-width: 200px;
+  margin-top:10px ;
+  margin-right: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+ }
+ main .content-main .body-main section .playlist .item img{
+  width: 100%;
+ }
+ main .content-main .body-main section .playlist .item span{
+  color: var(--greydarl);
+  font-size: 15px;
+ }
+ main .content-main .body-main section .playlist .item h4{
+  margin: 8px 0;
+ }
+ main .content-main .body-main section .playlist .item .layover{
+  position: relative;
+  cursor: pointer;
+ }
+ main .content-main .body-main section .playlist .item .layover .over{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition:  opacity 1s ease;
+}
+ main .content-main .body-main section .playlist .item .layover .over i{
+  font-size: 60px;
+ }
+ main .content-main .body-main section .playlist .layover:hover  .over{
+  opacity: 1;
+ }
+
+footer .wrap {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: rgb(221, 209, 209);
+  font-size: 18px;
+}
+footer .wrap a:hover{
+  color: white;
+}
+footer .wrap .track  {
+  display: flex;
+  align-items: center;
+}
+footer .wrap .track img {
+  width: 50px;
+}
+footer .wrap .track .track-information {
+  margin: 0 20px;
+}
+footer .wrap .track .track-information span:hover {
+  text-decoration: underline;
+}
+footer .wrap .track .icon a {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+footer .track-bar .top i{
+  font-size: 25px;
+  margin-right: 20px;
+}
